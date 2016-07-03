@@ -9,22 +9,32 @@
  * @author Anna Ekeren
  * @author Rafael Ferrer
  * @author Abhishek Mhatre
- * @version 1.0, 06/29/16
+ * @version 1.0, 06/30/16
  * 
- * Description: FutureInvestment2 Investment Data Type Class - CSC 225 Project 2
+ * Description: FutureInvestment2 Program - Investment Data Type Class - CSC 225 Project 2
+ * The Investment class is a data type class that allows users to create Investment objects 
+ * with the initial investment amount, number of years invested, and the annual interest 
+ * percentage rate of the Investment. This data type class is used in conjunction with the
+ * FutureInvestment2 driver class, which runs a GUI where a user can enter information about
+ * an Investment and then calculate its future value.
  * 
+ * Calculations: 
+ * Calculates the future value of an investment based on the initial investment amount, 
+ * the number of years invested, and the monthly interest rate of the Investment.
  * 
+ * Equation:
+ * investmentAmount * (1 + monthlyInterestRate)^(yearsInvested * 12)
+ * Where monthlyInterestRate = (annualInterest% / 100) / 12
  * 
- * 
- * 
- * 
+ * Example: A $10,000.00 investment for 1 year at an annual interest rate of 6.75% 
+ * $10,000.00 * (1 + 0.005625)^(1*12) = $10,696.28 
  * 
  ********************************************************************************************************/
 
 
 
 
-public class Investment{
+public class Investment {
 	
 	// Invariant of the Investment class:
 	//   1. The investment amount is stored in the instance variable investmentAmount, 
@@ -73,7 +83,7 @@ public class Investment{
 	 * @param years
 	 *   The number of years the user will invest their money for.
 	 * @param annualInterestPercent
-	 *   The annual interest percentage rate of the loan.
+	 *   The annual interest percentage rate of the investment.
 	 * @postcondition
 	 *   A new Investment object has been created with the parameters specified by the user.
 	 **/
